@@ -1,0 +1,22 @@
+<div class="table-container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Customer Name</th>
+                <th>Address</th>
+                <th>Phone Number</th>
+                <th>Email-id</th>
+                <th>#</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let cust of customerList">
+            <tr *ngIf="cust.roles=='customer'">
+                <td>{{cust.username}}</td>
+                <td>{{cust.address}}</td>
+                <td>{{cust.phno}}</td>
+                <td>{{cust.email}}</td>
+                <td data-label="Add"><a (click)="deleteCustomer(cust)" class="btn reject">Remove</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

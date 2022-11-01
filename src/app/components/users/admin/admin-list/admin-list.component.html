@@ -1,0 +1,24 @@
+<div class="table-container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Phone Number</th>
+                <th>Email-id</th>
+                <th>Place</th>
+                <th>#</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let admin of adminList">
+            <tr *ngIf="admin.roles=='admin'">
+                <td>{{admin.firstname}} {{admin.lastname}}</td>
+                <td>{{admin.position}}</td>
+                <td>{{admin.phno}}</td>
+                <td>{{admin.email}}</td>
+                <td>{{admin.place}}</td>
+                <td data-label="Add"><a (click)="deleteadmin(admin)" class="btn reject">Remove</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

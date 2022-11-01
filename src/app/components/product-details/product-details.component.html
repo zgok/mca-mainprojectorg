@@ -1,0 +1,49 @@
+<div class="container mt-5 mb-5" *ngFor="let item of bookItem">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-10">
+            <div class="card">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="images p-3">
+                            <div class="text-center p-4">
+                                <img id="main-image" class="adjust" src="{{imageFile}}" />
+                            </div>
+                            <div class="thumbnail text-center">
+                                <h2 class="authorName">by {{authorName}}</h2>
+                                <h3 class="sampleStory">SAMPLE STORY : <a class="aclas" href="{{pdfFile}}"
+                                        target="_blank" rel="noopener noreferrer">click
+                                        to open</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="product p-4">
+                            <div class="mt-4 mb-3"> <span class="text-uppercase text-muted brand">
+                                    <h2>{{item.bname}}</h2>
+                                </span>
+                                <h5 class="text-uppercase">{{item.category}}</h5>
+                                <div class="price d-flex flex-row align-items-center"> <span
+                                        class="act-price">${{item.price}}</span>
+                                </div>
+                            </div>
+                            <strong>Description :</strong>
+                            <p class="about">{{item.description}}</p>
+                            <div class="sizes mt-5">
+                                <h3 class="text-uppercase">Total Number of Pages : {{item.nofpages}}</h3>
+                                <label><strong>Target : {{item.target}} </strong></label>&nbsp;&nbsp;
+                                <label><strong>Received Orders :{{item.receivedorders}}</strong></label>
+                                <h3>Campaign end date : {{item.dateexpected}}</h3>
+                            </div>
+                            <div class="cart mt-4 align-items-center gradient-buttons">
+                                <button type="button" class="btn btn-outline-success" (click)="ordernow(item)">Order
+                                    Now</button>&nbsp;
+                                <button type="button" class="btn btn-outline-primary" (click)="addtocart(item)">Add to
+                                    Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

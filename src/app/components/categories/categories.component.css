@@ -1,0 +1,103 @@
+.card-top{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: .25rem;
+}
+.item{
+    margin:0px 15px;
+    text-align: center;
+}
+
+.item- img{
+    width: 64px;
+}
+
+.item a:hover{
+    color: rgb(192, 179, 39);
+}
+
+.card{
+    padding: 20px;
+    margin: 50px;
+}
+
+.card img{
+    width: 230px;
+    height: 200px;
+    margin: 15px;
+    margin-top: 1%;
+    transition: 0.3s ease-in-out;
+}
+
+.card img:hover{
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+}
+img{
+    margin-top: 5px;
+}
+.btn:hover{
+    color: rgb(192, 179, 39);
+}
+
+
+/* search */
+
+
+.searchbar {
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 10px;
+  }
+  
+  .search_input {
+    color: rgb(0, 0, 0);
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    caret-color: transparent;
+    line-height: 40px;
+    transition: width 0.4s linear;
+  }
+  
+  .searchbar:hover>.search_input {
+    padding: 0 10px;
+    width: 450px;
+    caret-color: red;
+    transition: width 0.4s linear;
+  }
+  
+  .searchbar:hover>.search_icon {
+    background: white;
+    color: #e74c3c;
+  }
+  
+  .search_icon {
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .logreg {
+    color: aliceblue;
+  }
+  
+  .logreg:hover {
+    color: rgba(159, 19, 235, 0.97);
+  }

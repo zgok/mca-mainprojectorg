@@ -1,0 +1,33 @@
+<ng-container *ngIf="rejectedList.length===0">
+    <p>Empty List</p>
+</ng-container>
+<ng-container *ngIf="rejectedList.length!=0">
+    <div class="table-container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Book Name</th>
+                    <th>Category</th>
+                    <th>No Of Pages</th>
+                    <th>Target</th>
+                    <th>Price</th>
+                    <!-- <th>#</th> -->
+                </tr>
+            </thead>
+            <ng-container *ngFor="let rej of rejectedList">
+                <ng-container *ngFor="let rej of rejectedList">
+                    <tbody>
+                        <tr>
+                            <td>{{rej.bname}}</td>
+                            <td>{{rej.category}}</td>
+                            <td>{{rej.nofpages}}</td>
+                            <td>{{rej.target}}</td>
+                            <td>{{rej.price}}</td>
+                            <!-- <td data-label="Add"><a (click)="remove(order)" class="btn reject">Remove</a></td> -->
+                        </tr>
+                    </tbody>
+                </ng-container>
+            </ng-container>
+        </table>
+    </div>
+</ng-container>

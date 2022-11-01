@@ -1,0 +1,21 @@
+<!-- HEADER -->
+<app-header (sideNavToggled)="sideNavStatus=$event"></app-header>
+
+<!-- SIDE-NAV -->
+<app-side-nav [ngClass]="{'side-nav-opened':sideNavStatus}"></app-side-nav>
+
+<!-- MAIN CONTENT -->
+<main [ngClass]="{'main-shrink':sideNavStatus}">
+
+  <div class="display-area">
+    <router-outlet></router-outlet>
+  </div>
+
+  <!-- FOOTER -->
+  <app-footer></app-footer>
+</main>
+<ng-confirm></ng-confirm>
+<!-- <ngx-spinner type="ball-scale-multiple"></ngx-spinner> -->
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="ball-atom" [fullScreen]="true">
+  <p style="color: white"> Loading... </p>
+</ngx-spinner>

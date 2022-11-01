@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of finishedList">
+            <div class="col-md-4">
+                <div class="profile-card-4 text-center">
+                    <div *ngFor="let img of imageList">
+                        <img *ngIf="item.bid==img.name" src="{{img.url}}" class="img img-responsive adjust">
+
+                    </div>
+                    <div class="profile-content">
+                        <!-- <div class="profile-name">{{item.uname}}</div> -->
+                        <div class="profile-description">{{item.bname}}</div>
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <div class="profile-overview">
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Targets&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Received Orders</p>
+                                    <h4>{{item.target}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{item.receivedorders}}</h4>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="profile-overview">
+                                    <div>Book by {{item.uname}}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>

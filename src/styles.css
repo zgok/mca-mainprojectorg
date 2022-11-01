@@ -1,0 +1,34 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+
+  --headerHeight: 4rem;
+  --sideNavOpenWidth: 250px;
+
+  --DeepPurple300: #9575cd;
+  --DeepPurple500: #673ab7;
+  --DeepPurple700: #512da8;
+  --DeepPurple900: #311b92;
+  --Gray900: #212121;
+  --Gray800: #424242;
+  --Gray700: #616161;
+  --Gray500: #9e9e9e;
+  --Gray300: #e0e0e0;
+
+  --Yellow900: #f57f17;
+  --Yellow700: #fbc02d;
+  --Yellow500: #ffeb3b;
+  --Yellow300: #fff176;
+
+  --LightGreenA400: #76ff03;
+  --Green600: #43a047;
+  --DeepOrange700: #f50057;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

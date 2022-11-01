@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "college-project-34aea": {
+      "hosting": {
+        "PBOOKS": [
+          "college-project-34aea"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "college-project-34aea"
+  }
+}

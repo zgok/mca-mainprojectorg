@@ -1,0 +1,89 @@
+<div class="card-top container-fluid">
+    <div class="container d-flex">
+        <div class="item">
+            <a (click)="getAllBooks()">
+                <img
+                    src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-books-literature-flaticons-lineal-color-flat-icons-31.png" />
+                <h6>All</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="search('Fiction')">
+                <img
+                    src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-fiction-literature-flaticons-lineal-color-flat-icons.png" />
+                <h6>Fiction</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="search('Biography')">
+                <img
+                    src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-books-literature-flaticons-lineal-color-flat-icons.png" />
+                <h6>Biography</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="search('History')">
+                <img style="height: 80px;margin-top: -3px;"
+                    src="https://img.icons8.com/color/48/000000/history-book.png" />
+                <h6 style="margin-top:-5px">History</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="search('Poetry')">
+                <img
+                    src="https://img.icons8.com/external-inipagistudio-lineal-color-inipagistudio/64/000000/external-poetry-student-club-inipagistudio-lineal-color-inipagistudio.png" />
+                <h6 style="margin-top:2px">Poetry</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="search('Comic')">
+                <img style="height: 80px;margin-top: -3px;"
+                    src="https://img.icons8.com/color/48/000000/comic-book.png" />
+                <h6 style="margin-top:-5px">Comic books</h6>
+            </a>
+        </div>
+        <div class="item"><br>
+            <div class="searchbar">
+                <input class="search_input" type="text" name="search" placeholder="Search..." [(ngModel)]="searchTxt">
+                <a class="search_icon" (click)="searchByName()">
+                    <i class="fas fa-search"></i>
+                    <img
+                        src="https://img.icons8.com/external-anggara-outline-color-anggara-putra/32/000000/external-search-social-media-interface-anggara-outline-color-anggara-putra.png" />
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of allBooks">
+            <div class="card col-md-3">
+                <div *ngFor="let file of fileList">
+                    <a routerLink="/productdetails/{{item.bid}}">
+                        <img *ngIf="item.bid==file.name" src="{{file.url}}">
+                    </a>
+                </div>
+                <h2 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">
+                    {{item.bname.toLocaleUpperCase()}}</h2>
+                <p><strong>Price : ${{item.price}}</strong></p>
+                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">
+                    Campaign end Date : {{item.dateexpected}}</p>
+                <!-- <h3>Target : {{item.target}}</h3> -->
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" [ngStyle]="{width: item.receivedorders + '%'}"
+                        attr.aria-valuenow="{{item.receivedorders}}" aria-valuemin="0"
+                        attr.aria-valuemax="{{item.target}}">
+                    </div>{{item.receivedorders}}%
+                </div><br>
+                <!-- <a routerLink="/productdetails/{{item.bid}}">details</a><br> -->
+                <button class="btn btn-dark" (click)="ordernow(item)">Order Now</button>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="(allBooks).length===0">
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                No Books Published on this Category !!
+            </div>
+        </ng-container>
+    </div>
+</div>

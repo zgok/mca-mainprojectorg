@@ -1,0 +1,176 @@
+:host {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: var(--headerHeight);
+  z-index: 2;
+}
+
+header {
+  height: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 1rem;
+}
+
+.menu-button {
+  height: 50px;
+  width: 50px;
+  border-radius: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  cursor: pointer;
+  transition: background-color 150ms ease-in;
+}
+
+
+.menu-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.brand-name {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+
+button {
+  font-weight: 600;
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*search css*/
+.bg-blue-steel {
+  --tw-bg-opacity: 1;
+  background-color: rgb(32 33 49/var(--tw-bg-opacity));
+}
+
+.outline-0 {
+  outline-width: 0;
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255/var(--tw-text-opacity));
+}
+
+.py-1 {
+  padding-bottom: 0.25rem;
+  padding-top: 0.25rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255/var(--tw-border-opacity));
+}
+
+.border-solid {
+  border-style: solid;
+}
+
+.border-b {
+  border-bottom-width: 1px;
+}
+
+.border-0 {
+  border-width: 0;
+}
+
+/*heading*/
+.nam:hover {
+  color: rgba(159, 19, 235, 0.97);
+}
+
+.nam {
+  color: azure;
+}
+
+.car img:hover {
+  transition: 0.3s ease-in-out;
+  transform: scale(1.1);
+}
+
+.adj {
+  color: azure;
+}
+
+.adj:hover {
+  color: brown;
+}
+
+.adj2:hover {
+  background-color: rgb(84, 81, 86);
+}
+
+
+/* search */
+
+
+.searchbar {
+  margin-bottom: auto;
+  margin-top: auto;
+  height: 60px;
+  background-color: #353b48;
+  border-radius: 30px;
+  padding: 10px;
+}
+
+.search_input {
+  color: white;
+  border: 0;
+  outline: 0;
+  background: none;
+  width: 0;
+  caret-color: transparent;
+  line-height: 40px;
+  transition: width 0.4s linear;
+}
+
+.searchbar:hover>.search_input {
+  padding: 0 10px;
+  width: 450px;
+  caret-color: red;
+  transition: width 0.4s linear;
+}
+
+.searchbar:hover>.search_icon {
+  background: white;
+  color: #e74c3c;
+}
+
+.search_icon {
+  height: 40px;
+  width: 40px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+}
+
+.logreg {
+  color: aliceblue;
+}
+
+.logreg:hover {
+  color: rgba(159, 19, 235, 0.97);
+}

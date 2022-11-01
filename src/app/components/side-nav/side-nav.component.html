@@ -1,0 +1,20 @@
+<div class="side-nav-content">
+    <ul class="nav-list">
+        <li class="nav-list-item"><a routerLink="/categories">Home</a></li>
+        <ng-container *ngIf="users$|async as user">
+            <ng-container *ngIf="user.roles=='admin'">
+                <li class="nav-list-item"><a routerLink="/users">User Details</a></li>
+                <li class="nav-list-item"><a routerLink="/reqlist">Requests</a></li>
+            </ng-container>
+            <ng-container *ngIf="user.roles=='customer'">
+                <li class="nav-list-item"><a routerLink="/publish">Publish</a></li>
+                <li class="nav-list-item"><a routerLink="/customerreq">Published</a></li>
+                <li class="nav-list-item"><a routerLink="/ordereditems">Ordered</a></li>
+                <li class="nav-list-item"><a routerLink="/rejectedorders">Rejected</a></li>
+            </ng-container>
+        </ng-container>
+        <li class="nav-list-item"><a routerLink="/finished">Finished</a></li>
+        <li class="nav-list-item"><a routerLink="/unfinished">Unfinished</a></li>
+        <li class="nav-list-item"><a routerLink="/aboutus">About Us</a></li>
+    </ul>
+</div>

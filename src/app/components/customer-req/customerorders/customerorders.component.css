@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.reject{
+    color: black;
+    font-weight: bold;
+}
+
+.btn{
+    text-decoration: none;
+    line-height: 35px;
+    display: inline-block;
+}
+.table-container{
+    margin: 40px auto 0;
+}
+.table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.reject:hover{
+    color: red;
+  }

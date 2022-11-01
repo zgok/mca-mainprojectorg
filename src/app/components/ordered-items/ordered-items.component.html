@@ -1,0 +1,47 @@
+<!-- <div class="row row-cols-1 row-cols-md-3 g-4">
+    <ng-container *ngFor="let data of orderList">
+        <ng-container *ngFor="let book of bookList">
+            <div class="col-md-4 col-sm-6 content-card" *ngIf="data.bid==book.bid">
+                <div class="card-big-shadow">
+                    <div class="card card-just-text" data-background="color" data-color="purple" data-radius="none">
+                        <div class="content">
+                            <h6 class="category">{{book.bname}}</h6><br>
+                            <h4 class="description">Price : {{book.price}} </h4>
+                            <h4>Campaign end date {{book.dateexpected}}</h4>
+                            <a routerLink="/productdetails/{{book.bid}}">details</a><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </ng-container>
+    <ng-container *ngIf="(orderList).length===0">
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            You have Not ordered anything !!
+        </div>
+    </ng-container>
+</div> -->
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <ng-container *ngFor="let data of orderList">
+        <ng-container *ngFor="let book of bookList">
+            <div class="col-md-4 col-sm-6 content-card" *ngIf="data.bid==book.bid">
+                <div class="card-big-shadow">
+                    <div class="card card-just-text" data-background="color" data-color="purple" data-radius="none">
+                        <div class="content">
+                            <h6 class="category">{{book.bname}}</h6><br>
+                            <h4 class="description">Price : {{book.price}} </h4>
+                            <h4>Campaign end date {{book.dateexpected}}</h4>
+                            <a routerLink="/productdetails/{{book.bid}}">details</a><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </ng-container>
+    <ng-container *ngIf="(orderList).length===0">
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            You have Not ordered anything !!
+        </div>
+    </ng-container>
+</div>

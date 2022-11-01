@@ -1,0 +1,98 @@
+body {
+    background-color: #000
+}
+
+.card {
+    border: none
+}
+
+.product {
+    background-color: #eee
+}
+
+.brand {
+    font-size: 13px
+}
+
+.act-price {
+    color: red;
+    font-weight: 700
+}
+
+.dis-price {
+    text-decoration: line-through
+}
+
+.about {
+    font-size: 14px
+}
+
+.color {
+    margin-bottom: 10px
+}
+
+label.radio {
+    cursor: pointer
+}
+
+label.radio input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    pointer-events: none
+}
+
+label.radio span {
+    padding: 2px 9px;
+    border: 2px solid #ff0000;
+    display: inline-block;
+    color: #ff0000;
+    border-radius: 3px;
+    text-transform: uppercase
+}
+
+label.radio input:checked+span {
+    border-color: #ff0000;
+    background-color: #ff0000;
+    color: #fff
+}
+
+/* .btn-danger {
+    background-color: #0eedd3 !important;
+    border-color: #0b9dec !important
+}
+
+.btn-danger:hover {
+    background-color: #081a84 !important;
+    border-color: #051d52 !important
+} */
+
+.btn-danger:focus {
+    box-shadow: none
+}
+
+.cart i {
+    margin-right: 10px
+}
+
+.adjust {
+    width: 250px;
+    height: 257px;
+}
+.gradient-buttons .btn {
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0.2) 49%, rgba(0,0,0,0.15) 51%, rgba(0,0,0,0.05));
+    background-repeat: repeat-x;
+}
+.authorName{
+    color:cadetblue;
+}
+.sampleStory{
+    color:#ff0000;
+}
+.aclas{
+    color: #000;
+}
+.aclas:hover{
+    color: burlywood;
+}

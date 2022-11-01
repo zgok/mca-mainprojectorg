@@ -1,0 +1,26 @@
+<div class="table-container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Customer Name</th>
+                <th>Address</th>
+                <th>Ordered Item</th>
+                <th>Phone Number</th>
+                <th>Email-id</th>
+            </tr>
+        </thead>
+        <ng-container *ngFor="let cust of customersList">
+            <ng-container *ngFor="let book of bookArray">
+                <tbody *ngFor="let order of orderList">
+                    <tr *ngIf="order.bid==book.bid &&order.uid==cust.uid">
+                        <td>{{cust.username}}</td>
+                        <td>{{cust.address}}</td>
+                        <td>{{book.bname}}</td>
+                        <td>{{cust.phno}}</td>
+                        <td>{{cust.email}}</td>
+                    </tr>
+                </tbody>
+            </ng-container>
+        </ng-container>
+    </table>
+</div>

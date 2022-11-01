@@ -1,0 +1,5 @@
+.display-area {
+    width: 95%;
+    min-height: calc(100vh - (2 * var(--headerHeight)) - 1rem);
+    margin: 1rem auto;
+  }

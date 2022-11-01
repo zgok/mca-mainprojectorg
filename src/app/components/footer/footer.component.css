@@ -1,0 +1,20 @@
+:host {
+    display: block;
+    height: var(--headerHeight);
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.name {
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-style: italic;
+    letter-spacing: 1px;
+}

@@ -1,0 +1,28 @@
+<div class="table-container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Customer Name</th>
+                <th>Address</th>
+                <th>Ordered Item</th>
+                <th>Phone Number</th>
+                <th>Email-id</th>
+                <th>#</th>
+            </tr>
+        </thead>
+        <ng-container *ngFor="let cust of orderCustomers">
+            <ng-container *ngFor="let item of orderItemList">
+                <tbody *ngFor="let order of orderList">
+                    <tr *ngIf="order.uid==cust.uid && order.bid==item.bid">
+                        <td>{{cust.username}}</td>
+                        <td>{{cust.address}}</td>
+                        <td>{{item.bname}}</td>
+                        <td>{{cust.phno}}</td>
+                        <td>{{cust.email}}</td>
+                        <td data-label="Add"><a (click)="remove(order)" class="btn reject">Remove</a></td>
+                    </tr>
+                </tbody>
+            </ng-container>
+        </ng-container>
+    </table>
+</div>

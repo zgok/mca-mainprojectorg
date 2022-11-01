@@ -1,0 +1,13 @@
+<ng-container *ngIf="customerReq">
+    <h4 class="m-t-0 m-b-20">Request List ({{customerReq.length}})</h4>
+    <div class="row">
+        <div class="col-sm-3" *ngFor="let pubReq of customerReq">
+            <app-request-card [publishRequest]="pubReq"></app-request-card>
+        </div>
+    </div>
+</ng-container>
+<ng-container *ngIf="(customerReq).length===0">
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        No Requests Pending !!
+    </div>
+</ng-container>

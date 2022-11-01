@@ -1,0 +1,14 @@
+<div class="card" style="width: 18rem;" >
+    <a *ngFor="let img of fileList" routerLink="/request-detail/{{publishRequest.bid}}">
+        <img *ngIf="publishRequest.bid==img.name" class="card-img-top adjustSize" src="{{img.url}}" alt="Card image cap">
+    </a>
+    <div class="card-body">
+        <h2 class="card-title">{{publishRequest.uname}}</h2>
+        <h3>Book Name : {{publishRequest.bname}}</h3>
+        <p class="card-text">{{publishRequest.description}}</p>
+        <p><strong>Price : ${{publishRequest.price}}</strong></p>
+    </div>
+    <div class="card-body">
+        <a class="card-link" routerLink="/request-detail/{{publishRequest.bid}}">Details</a>
+    </div>
+</div>

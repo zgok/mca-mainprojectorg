@@ -1,0 +1,27 @@
+.black-border {
+  border: 1px solid black;
+}
+
+/* function that sets the header display area and footer and side nav in position*/
+main {
+  position: absolute;
+  top: var(--headerHeight);
+  /* to get display area and footer to left when side nav disables */
+  left: 0px;
+  width: calc(100% - 0px);
+  z-index: 1;
+  min-height: calc(100vh - var(--headerHeight));
+  transition: left 100ms ease-in, width 100ms ease-in;
+  z-index: 1;
+}
+
+.main-shrink {
+  left: var(--sideNavOpenWidth);
+  width: calc(100% - var(--sideNavOpenWidth));
+}
+
+.display-area {
+  width: 95%;
+  min-height: calc(100vh - (2 * var(--headerHeight)) - 1rem);
+  margin: 1rem auto;
+}

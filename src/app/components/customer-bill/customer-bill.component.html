@@ -1,0 +1,85 @@
+<div class="card">
+    <div class="card-body">
+        <div class="container mb-5 mt-3">
+            <div class="row d-flex align-items-baseline">
+            </div>
+
+            <div class="container" *ngFor="let item of bookItem">
+                <div class="col-md-12">
+                    <div class="text-center">
+                        <h2> My Books</h2>
+                    </div>
+
+                </div>
+
+
+                <div class="row">
+                    <div class="col-xl-8">
+                        <ul class="list-unstyled" *ngIf="user$|async as user">
+                            <li class="text-muted">To: <span style="color:#5d9fc5 ;">{{user.username}}</span></li>
+                            <li class="text-muted">{{user.address}}</li>
+                            <li class="text-muted">{{user.email}}</li>
+                            <li class="text-muted"><i class="fas fa-phone"></i> {{user.phno}}</li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-4">
+                        <p class="text-muted">Invoice</p>
+                        <ul class="list-unstyled">
+                            <li class="text-muted"><i class="fas fa-circle" style="color:#84B0CA ;"></i> <span
+                                    class="fw-bold">ID:</span>#123-456</li>
+                            <li class="text-muted"><i class="fas fa-circle" style="color:#84B0CA ;"></i> <span
+                                    class="fw-bold">Date: </span>{{localDate}}</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row my-2 mx-1 justify-content-center">
+                    <table class="table table-striped table-borderless">
+                        <thead style="background-color:#84B0CA ;" class="text-white">
+                            <tr>
+                                <th scope="col">Book Name</th>
+                                <th scope="col">Category</th>
+                                <!-- <th scope="col">Description</th> -->
+                                <th scope="col">Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{{item.bname}}</td>
+                                <td>{{item.category}}</td>
+                                <!-- <td>{{item.description}}</td> -->
+                                <td>${{item.price}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row">
+                    <div class="col-xl-8">
+                        <!-- <p class="ms-3">Add additional notes and payment information</p> -->
+
+                    </div>
+                    <div class="col-xl-3">
+                        <!-- <ul class="list-unstyled">
+                            <li class="text-muted ms-3"><span class="text-black me-4">SubTotal</span>$1110</li>
+                            <li class="text-muted ms-3 mt-2"><span class="text-black me-4">Tax(2%)</span>$111</li>
+                        </ul> -->
+                        <p class="text-black float-start"><span class="text-black me-3"> Total Amount</span><span
+                                style="font-size: 25px;">${{item.price}}</span></p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-xl-10">
+                        <p>Paid</p><br>
+                        <p>Thank you for your purchase</p>
+                    </div>
+                    <div class="col-xl-2">
+                        <button type="button" class="btn btn-primary text-capitalize"
+                            style="background-color:#60bdf3 ;" (click)="print()">Print</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

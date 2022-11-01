@@ -1,0 +1,14 @@
+<div class="container">
+    <a [routerLink]="[{outlets:{show:['addadmin']}}]" class="link-dark">
+        <img src="https://img.icons8.com/ios-filled/50/000000/add--v1.png"/>
+        Add Admin
+    </a>
+    <br>
+    <a [routerLink]="[{outlets:{show:['adminlist']}}]" class="link-dark">
+        <img src="https://img.icons8.com/ios-filled/50/000000/summary-list.png"/>
+        Admin List
+    </a><br><br>
+</div>
+<div class="display-area">
+    <router-outlet name="show"></router-outlet>  
+</div>
